@@ -1,0 +1,97 @@
+<div class="panel-body">
+<article>
+		{DESCRIPTION}
+		</article>
+        <div class="clear"></div>
+	<p>Опубликовал {AUTHOR} - {DATE} - {VIEWS}</p>
+	<div class="tags">
+		[if_tags]
+		Метки:
+		[TAGS={<a href="[TAGLINK]">[TAGCAPTION]</a>}/TAGS]
+		[/if_tags]
+	</div>
+	<p>
+		[if_similar]
+		Похожие записи:
+		[SIMILAR={<a href="[SIMLINK]">[SIMCAPTION]</a>}/SIMILAR]
+		[/if_similar]
+	</p>
+	<br>
+	
+	<br>
+	<div class="well">				
+<script type="text/javascript" src="//yandex.st/share/share.js"
+charset="utf-8"></script>
+<span class="yashare-auto-init" data-yashareL10n="ru"
+ data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug,gplus,surfingbird"
+
+></span> 
+</div>
+
+
+<div class="container-fluid">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs navbar-right">
+  <li class="active"><a href="#typical-comments" data-toggle="tab">Обычные</a></li>
+  <li><a href="#vk-comments" data-toggle="tab">ВКонтакте</a></li>
+</ul>
+</div>
+	
+	
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="typical-comments">
+  
+  
+  <div class="panel panel-warning">
+<div class="panel-heading">
+<h4 class="panel-title">Обычные комментарии</h4>
+</div>
+  <div class="panel-body">
+	
+		{COMMENTFORM}
+		<div class="comments">
+	<br>{PAGES}<br>
+        {COMMENTS}
+        {PAGES}
+        </div>
+        </div>
+                </div>
+  
+  
+  
+  
+</div>
+  <div class="tab-pane" id="vk-comments">
+  <!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 3885385, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 5, pageUrl: '{URL}', attach: "*"});
+</script>
+	</div></div>
+	<script type="text/javascript">
+	$('#myTab a[href="#typical-comments"]').tab('show') // Select tab by name
+$('#myTab a:first').tab('show') // Select first tab
+$('#myTab a:last').tab('show') // Select last tab
+$('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+$('#myTab a[href="#vk-comments"]').tab('show') // Select tab by name
+$('#myTab a:first').tab('show') // Select first tab
+$('#myTab a:last').tab('show') // Select last tab
+$('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+	</script>
+	
+	
+	
+	
+	
+	
+        
